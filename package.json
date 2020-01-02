@@ -1,0 +1,33 @@
+{
+  "name": "modern-error",
+  "version": "1.0.0",
+  "description": "A modern take on JavaScript errors",
+  "keywords": [
+    "error",
+    "errors",
+    "error-handling",
+    "exceptions"
+  ],
+  "homepage": "https://github.com/jessety/modern-error#readme",
+  "bugs": {
+    "url": "https://github.com/jessety/modern-error/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessety/modern-error.git"
+  },
+  "license": "MIT",
+  "author": "Jesse Youngblood",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "lint": "npx eslint ."
+  },
+  "devDependencies": {
+    "@jessety/eslint-config": "^1.0.4",
+    "eslint": "^6.8.0"
+  }
+}
