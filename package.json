@@ -24,10 +24,12 @@
     "example": "examples"
   },
   "scripts": {
-    "lint": "npx eslint ."
+    "lint": "eslint .",
+    "test": "jest"
   },
   "devDependencies": {
     "@jessety/eslint-config": "^1.0.4",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0"
   }
 }
