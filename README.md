@@ -2,12 +2,13 @@
 
 > A modern take on JavaScript errors
 
-`modern-error` a drop-in replacement for the native Error class, with slightly more modern features:
+`modern-error` is a drop-in replacement for the native Error class, with slightly more modern features:
 
-- Instantiate new errors with a string, object, or an existing error object
 - Create and throw errors with additional properties in one line
-- Easily define error subclasses with default property sets
-- Serialize 'message' to JSON by default, customize which other non-enumerable properties are serialized with or without subclassing
+- Instantiate errors with a string, object, or existing native error
+- Serialize the `message` property to JSON by default, without the need for a JSON replacer function or subclass
+- Customize which non-enumerable properties are serialized without subclassing
+- Easily define subclasses with default properties
 
 ## Installation
 
