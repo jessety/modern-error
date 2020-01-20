@@ -1,6 +1,6 @@
 {
   "name": "modern-error",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern take on JavaScript errors",
   "keywords": [
     "error",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/jessety/modern-error.git"
   },
   "license": "MIT",
-  "author": "Jesse Youngblood",
+  "author": "Jesse Youngblood <jessetyoungblood@gmail.com> (https://jesseyoungblood.com)",
   "type": "commonjs",
   "main": "./src/index.js",
   "directories": {
