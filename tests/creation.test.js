@@ -93,4 +93,17 @@ describe('the constructor', () => {
     }
   });
 
+
+  test('allows overwriting the "name" property', () => {
+
+    const name = 'ERROR-1231';
+
+    const anError = new ModernError({
+      message: 'An issue occurred',
+      name: name
+    });
+
+    expect(anError.name).toBe(name);
+  });
+
 });

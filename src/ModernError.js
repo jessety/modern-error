@@ -58,7 +58,7 @@ class ModernError extends Error {
 
     // Set the object name to that of the constructor, so subclasses are named correctly
 
-    Object.defineProperty(this, 'name', { value: this.constructor.name });
+    Object.defineProperty(this, 'name', { value: this.constructor.name, writable: true });
 
     // Inherit all default properties from the static defaults() getter
 
