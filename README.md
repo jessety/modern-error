@@ -40,7 +40,7 @@ throw new ModernError('An error occurred');
 Create an error with a message and additional properties
 
 ```javascript
-throw new ModernError('An error occurred', { code: 'D12 ' });
+throw new ModernError('An error occurred', { code: 'D12' });
 ```
 
 Create an error with an object
