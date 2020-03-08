@@ -19,7 +19,7 @@
   "license": "MIT",
   "author": "Jesse Youngblood <jessetyoungblood@gmail.com> (https://jesseyoungblood.com)",
   "type": "commonjs",
-  "main": "./src/index.js",
+  "main": "./src/ModernError.js",
   "directories": {
     "example": "examples"
   },

@@ -1,6 +1,6 @@
 'use strict';
 
-const ModernError = require('../src/index.js');
+const ModernError = require('../src/ModernError.js');
 
 describe('subclasses', () => {
 

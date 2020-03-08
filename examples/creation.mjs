@@ -1,4 +1,4 @@
-import ModernError from '../src/index.mjs';
+import ModernError from '../src/ModernError.js';
 
 
 console.log(`\n> Creating an error with a message`);
