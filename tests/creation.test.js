@@ -106,4 +106,12 @@ describe('the constructor', () => {
     expect(anError.name).toBe(name);
   });
 
+  test('uses default name "Error"', () => {
+
+    const anError = new ModernError('An issue occurred');
+
+    expect(anError.name).toBe('Error');
+
+    expect(anError.toString()).toBe('Error: An issue occurred');
+  });
 });

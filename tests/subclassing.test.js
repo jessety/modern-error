@@ -9,6 +9,8 @@ describe('subclasses', () => {
     class DatabaseError extends ModernError {}
     const databaseError = new DatabaseError('An error has occurred');
 
+    expect(DatabaseError.name).toBe('DatabaseError');
+    expect(databaseError.constructor.name).toBe('DatabaseError');
     expect(databaseError.name).toBe('DatabaseError');
 
     expect(databaseError instanceof DatabaseError).toBe(true);
@@ -45,9 +47,15 @@ describe('subclasses', () => {
     const timeout = new TimeoutError();
 
     expect(database instanceof Error).toBe(true);
+    expect(database instanceof ModernError).toBe(true);
     expect(database instanceof DatabaseError).toBe(true);
+
     expect(network instanceof DatabaseError).toBe(false);
-    expect(timeout instanceof TimeoutError).toBe(true);
+
+    expect(timeout instanceof Error).toBe(true);
+    expect(timeout instanceof ModernError).toBe(true);
     expect(timeout instanceof NetworkError).toBe(true);
+    expect(timeout instanceof TimeoutError).toBe(true);
+    expect(timeout instanceof DatabaseError).toBe(false);
   });
 });
