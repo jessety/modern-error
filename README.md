@@ -101,7 +101,7 @@ const error = new ErrorWithDefaults('Test', { code: 'D12' });
 
 ### Serialization
 
-`modern-error` serializes it's non-enumerable `message` property to JSON by default. You may also specify which other non-enumerable properties to serialize without subclassing by setting the class property `serialize`.
+`modern-error` serializes its non-enumerable `message` property to JSON by default. You may also specify which other non-enumerable properties to serialize without subclassing by setting the class property `serialize`.
 
 ```javascript
 ModernError.serialize = ['message', 'stack'];

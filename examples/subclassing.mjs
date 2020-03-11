@@ -41,7 +41,7 @@ const stacklessError = new StacklessError('This is a custom error without a stac
 console.log(stacklessError);
 
 
-console.log(`\n> Creating an error subclass that serializes it's stack to JSON by default\n`);
+console.log(`\n> Creating an error subclass that serializes its stack to JSON by default\n`);
 
 class StackError extends ModernError {
 

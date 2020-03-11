@@ -21,7 +21,7 @@ ModernError.serialize = ['message', 'stack'];
 console.log(JSON.stringify(error, null, ' '));
 
 
-console.log(`\n> Creating an error subclass that serializes it's stack to JSON by default`);
+console.log(`\n> Creating an error subclass that serializes its stack to JSON by default`);
 
 class StackError extends ModernError {
 

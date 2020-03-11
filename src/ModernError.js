@@ -20,7 +20,7 @@ class ModernError extends Error {
 
     let [message, properties] = args;
 
-    // Check if the first argument is an error object, and inherit it's properties if so
+    // Check if the first argument is an error object, and inherit its properties if so
 
     if (message instanceof Error) {
 
