@@ -124,6 +124,8 @@ console.log(JSON.stringify(error));
 // JSON representation will include the `stack` property
 ```
 
+All property keys are sorted alphabetically before serialization.
+
 ## License
 
 MIT © Jesse Youngblood
