@@ -144,5 +144,7 @@ class ModernError extends Error {
   }
 }
 
+Object.defineProperty(ModernError, 'name', { value: 'Error', writable: true });
+
 // export default ModernError;
 module.exports = ModernError;
