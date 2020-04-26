@@ -2,10 +2,9 @@
 
 A modern take on JavaScript errors
 
-[![test](https://github.com/jessety/modern-error/workflows/test/badge.svg)](https://github.com/jessety/modern-error/actions?query=workflow%3Atest)
-[![lint](https://github.com/jessety/modern-error/workflows/lint/badge.svg)](https://github.com/jessety/modern-error/actions?query=workflow%3Alint)
-[![license](https://img.shields.io/github/license/jessety/modern-error.svg)](https://github.com/jessety/modern-error/blob/master/LICENSE)
+[![ci](https://github.com/jessety/modern-error/workflows/ci/badge.svg)](https://github.com/jessety/modern-error/actions)
 [![npm](https://img.shields.io/npm/v/modern-error.svg)](https://www.npmjs.com/package/modern-error)
+[![license](https://img.shields.io/github/license/jessety/modern-error.svg)](https://github.com/jessety/modern-error/blob/master/LICENSE)
 
 `modern-error` is a drop-in replacement for the native Error class, with slightly more modern features:
 
