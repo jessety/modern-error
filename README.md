@@ -114,6 +114,41 @@ const error = new HTTPError('Error occurred');
 // status: 500
 ```
 
+### Defaults
+
+Defaults properties for instances of `ModernError` may be defined by setting the class `defaults` property:
+
+```javascript
+ModernError.defaults = {
+  status: 500,
+  test: false
+};
+```
+
+Or overriding the `defaults` static function of a subclass:
+
+```javascript
+class ErrorWithDefaults extends ModernError() {
+  static get defaults() {
+    return {
+      status: 500,
+      test: false
+    };
+  }
+}
+```
+
+Or, finally, by declaring defaults in a quick subclass:
+
+```javascript
+const ErrorWithDefaults = ModernError.subclass({
+  defaults: {
+    status: 500,
+    test: false
+  }
+});
+```
+
 ### Serialization
 
 `modern-error` serializes its non-enumerable `message` property to JSON by default. You may also specify which other non-enumerable properties to serialize without subclassing by setting the class property `serialize`.

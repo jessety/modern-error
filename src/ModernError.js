@@ -82,12 +82,22 @@ class ModernError extends Error {
    * Override in subclasses to use
    *
    * @private
-   * @readonly
    * @static
    * @memberof ModernError
    */
   static get defaults() {
-    return {};
+    return (typeof this._defaults === 'object') ? this._defaults : {};
+  }
+
+  /**
+   * Set default property values for new instances of this class
+   *
+   * @public
+   * @static
+   * @memberof ModernError
+   */
+  static set defaults(object) {
+    Object.defineProperty(this, '_defaults', { value: object });
   }
 
   /**

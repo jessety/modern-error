@@ -114,4 +114,14 @@ describe('the constructor', () => {
 
     expect(anError.toString()).toBe('Error: An issue occurred');
   });
+
+  test('inherits defaults defined without subclassing', () => {
+
+    ModernError.defaults = { status: 500, test: false };
+
+    const anError = new ModernError('An issue occurred');
+
+    expect(anError.status).toBe(500);
+    expect(anError.test).toBe(false);
+  });
 });

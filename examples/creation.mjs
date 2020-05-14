@@ -34,3 +34,11 @@ nativeError.code = 'D12';
 const createdWithError = new ModernError(nativeError);
 
 console.log(createdWithError);
+
+console.log(`\n> Modifying default values for all new instances of the class, without subclassing`);
+
+ModernError.defaults = { status: 500, test: false };
+
+const createdWithDefaults = new ModernError('An error has occurred.');
+
+console.log(JSON.stringify(createdWithDefaults, null, ' '));
