@@ -98,6 +98,22 @@ const error = new ErrorWithDefaults('Test', { code: 'D12' });
 // details: 'No further details'
 ```
 
+Subclasses may alternatively be created by invoking the static `subclass` function.
+
+```javascript
+const HTTPError = ModernError.subclass({
+  name: 'HTTPError',
+  defaults: { status: 500 },
+  serialize: ['message', 'stack']
+});
+
+const error = new HTTPError('Error occurred');
+
+// error's properties are:
+// message: Error occurred
+// status: 500
+```
+
 ### Serialization
 
 `modern-error` serializes its non-enumerable `message` property to JSON by default. You may also specify which other non-enumerable properties to serialize without subclassing by setting the class property `serialize`.

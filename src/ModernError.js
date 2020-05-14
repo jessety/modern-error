@@ -142,6 +142,37 @@ class ModernError extends Error {
 
     return sorted;
   }
+
+  /**
+   * Create a subclass
+   *
+   * @static
+   * @param {object} [options={}]
+   * @param {object} [options.defaults={}] - Define default properties
+   * @param {array}  [options.serialize=['message']] - Set which non-enumerable properties to serialize to JSON by default
+   * @param {string} [options.name='Error'] - Set a custom name for this error
+   * @returns
+   * @memberof ModernError
+   */
+  static subclass(options = {}) {
+
+    const defaults = options.defaults || this.defaults;
+    const serialize = options.serialize || this.serialize;
+    const name = options.name || this.name;
+
+    const subclass = class extends this {
+      static get defaults() {
+        return defaults;
+      }
+      static get serialize() {
+        return serialize;
+      }
+    };
+
+    Object.defineProperty(subclass, 'name', { value: name, writable: true });
+
+    return subclass;
+  }
 }
 
 Object.defineProperty(ModernError, 'name', { value: 'Error', writable: true });

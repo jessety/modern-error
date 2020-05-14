@@ -54,3 +54,22 @@ class StackError extends ModernError {
 const stackError = new StackError({ message: 'This is a stack error', test: true });
 
 console.log(JSON.stringify(stackError, null, '  '));
+
+console.log(`\n> Creating an error subclass using the static function`);
+
+const HTTPError = ModernError.subclass('HTTPError', { status: 500 });
+
+const notFound = new HTTPError('Item not found', { status: 404 });
+console.log(notFound);
+
+const unknownError = new HTTPError('Something is amiss');
+console.log(unknownError);
+
+const QuickError = ModernError.subclass({
+  defaults: { status: 500 },
+  serialize: ['name', 'stack'],
+  name: 'QuickError'
+});
+
+const quick = new QuickError('That was fast!');
+console.log(quick);

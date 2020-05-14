@@ -58,4 +58,45 @@ describe('subclasses', () => {
     expect(timeout instanceof TimeoutError).toBe(true);
     expect(timeout instanceof DatabaseError).toBe(false);
   });
+
+  test('can be created via the subclass static function', () => {
+
+    const HTTPError = ModernError.subclass({
+      defaults: { status: 500 },
+      serialize: ['message', 'stack'],
+      name: 'HTTPError'
+    });
+
+    const error = new HTTPError('An error has occurred');
+
+    expect(error.name).toEqual('HTTPError');
+    expect(error.status).toEqual(500);
+    expect(error instanceof HTTPError).toBe(true);
+
+    const notFound = new HTTPError('Not found', { status: 404 });
+    expect(notFound instanceof HTTPError).toBe(true);
+
+    const BasicError = ModernError.subclass();
+    expect(BasicError.defaults).toEqual(ModernError.defaults);
+    expect(BasicError.serialize).toEqual(ModernError.serialize);
+
+    const basic = new BasicError('An error has occurred.');
+    expect(BasicError.name).toEqual('Error');
+    expect(basic.name).toEqual('Error');
+
+    const NamedError = ModernError.subclass({ name: 'NamedError' });
+    expect(NamedError.name).toBe('NamedError');
+    const named = new NamedError('An error has occurred');
+    expect(named.name).toBe('NamedError');
+
+    const StacklessError = ModernError.subclass({
+      name: 'StacklessError',
+      defaults: { stack: undefined }
+    });
+
+    expect(StacklessError.name).toBe('StacklessError');
+    const stackless = new StacklessError('An error has occurred');
+    expect(stackless.name).toBe('StacklessError');
+    expect(stackless.stack).toBeUndefined();
+  });
 });
