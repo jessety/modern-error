@@ -21,14 +21,17 @@
   "type": "commonjs",
   "main": "./src/ModernError.js",
   "directories": {
-    "example": "examples"
+    "example": "examples",
+    "lib": "src",
+    "test": "tests"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . && editorconfig-checker",
     "test": "jest"
   },
   "devDependencies": {
     "@jessety/eslint-config": "^1.0.4",
+    "editorconfig-checker": "^3.0.4",
     "eslint": "^6.8.0",
     "jest": "^25.1.0"
   }
