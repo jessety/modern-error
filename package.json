@@ -26,6 +26,9 @@
     "example": "examples",
     "test": "tests"
   },
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "lint": "eslint . && editorconfig-checker",
     "test": "jest"
