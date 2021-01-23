@@ -20,9 +20,10 @@
   "author": "Jesse Youngblood <jessetyoungblood@gmail.com> (https://jesseyoungblood.com)",
   "type": "commonjs",
   "main": "./src/ModernError.js",
+  "types": "./src/ModernError.d.ts",
   "directories": {
-    "example": "examples",
     "lib": "src",
+    "example": "examples",
     "test": "tests"
   },
   "scripts": {
