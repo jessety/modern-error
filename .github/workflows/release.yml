@@ -6,8 +6,7 @@ on:
       - 'v*' # Wait for push events with tags matching v*, e.g. v1.0, v20.15.10, v0.3.1
 
 jobs:
-  build:
-    name: release
+  release:
     runs-on: ubuntu-latest
     steps:
 
@@ -17,7 +16,7 @@ jobs:
           fetch-depth: 0 # Git history won't be fetched without this option
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
 
       - name: Generate release notes # To change the release notes format, edit RELEASE.md.hbs
         id: notes
