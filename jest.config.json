@@ -1,0 +1,5 @@
+{
+  "collectCoverageFrom": ["src/**/*.js"],
+  "collectCoverage": true,
+  "verbose": true
+}
