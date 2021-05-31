@@ -3,6 +3,7 @@
 A modern take on JavaScript errors
 
 [![ci](https://github.com/jessety/modern-error/workflows/ci/badge.svg)](https://github.com/jessety/modern-error/actions)
+[![coverage](https://codecov.io/gh/jessety/modern-error/branch/main/graph/badge.svg?token=MDlKWUh5o9)](https://codecov.io/gh/jessety/modern-error)
 [![npm](https://img.shields.io/npm/v/modern-error.svg)](https://www.npmjs.com/package/modern-error)
 [![license](https://img.shields.io/github/license/jessety/modern-error.svg)](https://github.com/jessety/modern-error/blob/master/LICENSE)
 
